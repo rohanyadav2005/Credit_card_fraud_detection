@@ -49,14 +49,13 @@ flowchart LR
 
 ## Project structure
 credit_card_fraud/
-├── dataload.py # Loads creditcard.csv from a kagglehub download path
-├── train.py # Trains LR baseline + SMOTE/XGBoost model, saves artifacts
-├── dashboard.py # Streamlit dashboard (live stream + batch scoring)
-├── app.py # FastAPI serving endpoint
-├── models/ # Saved model artifacts (gitignored — regenerate locally)
+├── dataload.py      # Loads creditcard.csv from a kagglehub download path
+├── train.py         # Trains LR baseline + SMOTE/XGBoost model, saves artifacts
+├── dashboard.py      # Streamlit dashboard (live stream + batch scoring)
+├── app.py            # FastAPI serving endpoint
+├── models/            # Saved model artifacts (gitignored — regenerate locally)
 ├── requirements.txt
 └── README.md
-
 ## Setup
 
 ```bash
