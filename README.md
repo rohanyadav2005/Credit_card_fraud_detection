@@ -48,6 +48,8 @@ flowchart LR
 ```
 
 ## Project structure
+
+```
 credit_card_fraud/
 ├── dataload.py      # Loads creditcard.csv from a kagglehub download path
 ├── train.py         # Trains LR baseline + SMOTE/XGBoost model, saves artifacts
@@ -56,11 +58,13 @@ credit_card_fraud/
 ├── models/            # Saved model artifacts (gitignored — regenerate locally)
 ├── requirements.txt
 └── README.md
+```
+
 ## Setup
 
 ```bash
-git clone https://github.com/rohanyadav2005/Credit_card_fraud_detection.git
-cd Credit_card_fraud_detection
+git clone https://github.com/<your-username>/credit_card_fraud.git
+cd credit_card_fraud
 python -m venv venv
 source venv/bin/activate   # venv\Scripts\activate on Windows
 pip install -r requirements.txt
@@ -105,5 +109,5 @@ uvicorn app:app --reload
 ## Notes
 
 - `Time` is dropped in favor of a derived `Hour` (cyclical hour-of-day) feature; `Amount` is standardized.
-- The decision threshold is chosen post-hoc to maximize F1 score on the held-out test set rather than using the default 0.5.
+- The decision threshold is chosen post-hoc to maximize F1 on the held-out test set rather than using the default 0.5.
 - `V1`–`V28` are the dataset's pre-anonymized PCA components.
